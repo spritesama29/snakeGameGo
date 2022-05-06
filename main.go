@@ -459,17 +459,24 @@ func processPlayerInput(theGame *Game) {
 	if theGame.player.yloc <= 0 {
 		theGame.player.dY = 0
 		theGame.player.yloc = 0
+		os.Exit(69)
+		println("You hit the edge!")
 	} else if theGame.player.yloc > 675 {
 		theGame.player.dY = 0
 		theGame.player.yloc = 675
-
+		os.Exit(69)
+		println("You hit the edge!")
 	}
 	if theGame.player.xloc <= 0 {
 		theGame.player.dX = 0
 		theGame.player.xloc = 0
+		os.Exit(69)
+		println("You hit the edge!")
 	} else if theGame.player.xloc > GameWidth-30 {
 		theGame.player.dX = 0
 		theGame.player.xloc = GameWidth - 30
+		os.Exit(69)
+		println("You hit the edge!")
 	}
 }
 
